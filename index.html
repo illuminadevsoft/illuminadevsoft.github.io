@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illumina DevSoft — Premium Indie Game Studio</title>
-  <meta name="description" content="Illumina DevSoft crafts authentic, timeless strategy and board games. Experience Hong Kong Mahjong with smart AI and realtime 4-player multiplayer.">
+  <title>illumina Software — Mobile Games & Interactive Entertainment</title>
+  <meta name="description" content="illumina Software creates timeless strategy and board games. Experience Hong Kong Mahjong with smart AI and realtime 4-player multiplayer on Google Play.">
   <link rel="icon" type="image/png" href="icon512.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans for clean, modern uppercase and lowercase typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -69,12 +69,12 @@
 
     /* Navbar */
     header {
-      padding: 24px 0;
+      padding: 20px 0;
       position: sticky;
       top: 0;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      background: rgba(4, 13, 10, 0.7);
+      background: rgba(4, 13, 10, 0.85);
       border-bottom: 1px solid rgba(212, 175, 55, 0.15);
       z-index: 100;
     }
@@ -101,22 +101,23 @@
       object-fit: cover;
     }
 
-    .brand-text h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      background: linear-gradient(135deg, #ffffff 20%, var(--gold-bright) 100%);
+    .brand-text .brand-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--gold-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: block;
     }
 
-    .brand-text p {
-      font-size: 0.75rem;
-      letter-spacing: 2px;
+    .brand-text .brand-subtitle {
+      font-size: 0.78rem;
+      letter-spacing: 0.8px;
       color: var(--emerald-accent);
-      text-transform: uppercase;
       font-weight: 600;
+      display: block;
+      margin-top: 1px;
     }
 
     .nav-links {
@@ -128,7 +129,7 @@
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 500;
       transition: var(--transition-smooth);
     }
@@ -140,9 +141,9 @@
     .btn-nav {
       background: linear-gradient(135deg, #10b981 0%, #059669 100%);
       color: white !important;
-      padding: 9px 20px;
+      padding: 9px 22px;
       border-radius: 30px;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
       box-shadow: 0 4px 15px var(--emerald-glow);
     }
 
@@ -153,7 +154,7 @@
 
     /* Hero Section */
     .hero {
-      padding: 80px 0 50px;
+      padding: 70px 0 40px;
       text-align: center;
       position: relative;
     }
@@ -166,12 +167,10 @@
       background: rgba(212, 175, 55, 0.1);
       border: 1px solid var(--border-card);
       border-radius: 50px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
       color: var(--gold-bright);
-      margin-bottom: 28px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
     .hero-badge .dot {
@@ -189,21 +188,21 @@
     }
 
     .hero h2 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 24px;
-      background: linear-gradient(180deg, #ffffff 40%, #d8c27a 100%);
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 40%, #e2d39b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
       color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 40px;
+      max-width: 660px;
+      margin: 0 auto 36px;
       font-weight: 400;
     }
 
@@ -259,7 +258,7 @@
 
     /* Floating Tiles Showcase */
     .tiles-floating-wrapper {
-      margin: 60px 0 80px;
+      margin: 50px 0 70px;
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -270,7 +269,7 @@
       width: 76px;
       height: 102px;
       background: linear-gradient(145deg, #fffffb 0%, #ede8dc 100%);
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 
         0 12px 24px rgba(0, 0, 0, 0.5),
         0 4px 8px rgba(0, 0, 0, 0.3),
@@ -298,13 +297,13 @@
     }
 
     .tile-card:hover {
-      transform: translateY(-20px) scale(1.15) !important;
+      transform: translateY(-18px) scale(1.15) !important;
       box-shadow: 0 20px 35px var(--gold-glow);
     }
 
     .tile-symbol {
       font-size: 2.2rem;
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1;
     }
 
@@ -318,6 +317,7 @@
       color: #64748b;
       margin-top: 4px;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     /* Featured Game Banner Card */
@@ -328,7 +328,7 @@
       padding: 48px;
       margin-bottom: 90px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 40px;
       align-items: center;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
@@ -350,15 +350,13 @@
       color: var(--emerald-accent);
       font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
       margin-bottom: 16px;
     }
 
     .game-title {
-      font-family: 'Cinzel', serif;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       font-weight: 800;
+      letter-spacing: -0.8px;
       margin-bottom: 16px;
       background: linear-gradient(135deg, #ffffff 40%, var(--gold-bright) 100%);
       -webkit-background-clip: text;
@@ -387,7 +385,7 @@
       font-size: 0.75rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
     .spec-item span:last-child {
@@ -403,21 +401,27 @@
       align-items: center;
     }
 
+    .icon-container {
+      position: relative;
+      padding: 10px;
+    }
+
     .game-icon-large {
-      width: 240px;
-      height: 240px;
-      border-radius: 36px;
-      border: 3px solid var(--gold-primary);
+      width: 220px;
+      height: 220px;
+      border-radius: 40px;
+      border: 2px solid var(--gold-primary);
       box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.8),
-        0 0 35px var(--gold-glow);
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        0 0 40px var(--gold-glow);
       object-fit: cover;
+      display: block;
       transition: var(--transition-smooth);
     }
 
     .game-preview-visual:hover .game-icon-large {
-      transform: scale(1.05) rotate(2deg);
-      box-shadow: 0 20px 45px rgba(212, 175, 55, 0.5);
+      transform: scale(1.04) translateY(-4px);
+      box-shadow: 0 25px 50px rgba(212, 175, 55, 0.5);
     }
 
     /* Features Grid */
@@ -427,8 +431,9 @@
     }
 
     .section-header h3 {
-      font-family: 'Cinzel', serif;
       font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.6px;
       color: white;
       margin-bottom: 12px;
     }
@@ -450,7 +455,7 @@
     .feature-box {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 32px;
       transition: var(--transition-smooth);
       position: relative;
@@ -488,6 +493,7 @@
 
     .feature-box h4 {
       font-size: 1.25rem;
+      font-weight: 700;
       margin-bottom: 12px;
       color: white;
     }
@@ -502,7 +508,7 @@
     footer {
       border-top: 1px solid rgba(212, 175, 55, 0.15);
       background: rgba(3, 10, 8, 0.95);
-      padding: 50px 0 30px;
+      padding: 45px 0 30px;
       margin-top: 60px;
     }
 
@@ -515,6 +521,12 @@
       margin-bottom: 30px;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .footer-links {
       display: flex;
       gap: 24px;
@@ -524,7 +536,7 @@
     .footer-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       transition: var(--transition-smooth);
     }
 
@@ -532,23 +544,10 @@
       color: var(--gold-bright);
     }
 
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      color: var(--emerald-accent);
-      font-weight: 600;
-    }
-
     .copyright {
       text-align: center;
       color: #64748b;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       padding-top: 24px;
     }
@@ -578,17 +577,16 @@
   <header>
     <div class="container nav-wrapper">
       <a href="#" class="brand">
-        <img src="icon512.png" alt="Illumina DevSoft Logo" class="brand-logo">
+        <img src="icon512.png" alt="illumina Software Logo" class="brand-logo">
         <div class="brand-text">
-          <h1>ILLUMINA DEVSOFT</h1>
-          <p>Indie Game Studio</p>
+          <span class="brand-title">illumina Software</span>
+          <span class="brand-subtitle">Game & App Studio</span>
         </div>
       </a>
       <nav class="nav-links">
         <a href="#games">Games</a>
         <a href="#features">Features</a>
         <a href="privacy.html">Privacy Policy</a>
-        <a href="app-ads.txt" class="status-badge" target="_blank">✓ app-ads.txt</a>
         <a href="#games" class="btn-nav">Play Now</a>
       </nav>
     </div>
@@ -598,7 +596,7 @@
   <main class="container">
     <section class="hero">
       <div class="hero-badge">
-        <span class="dot"></span> Official Game Studio Portal
+        <span class="dot"></span> Official Studio Portal
       </div>
       <h2>Crafting Timeless Strategy & Board Games</h2>
       <p>
@@ -610,7 +608,7 @@
           <span>→</span>
         </a>
         <a href="privacy.html" class="btn-secondary">
-          <span>Developer Policy</span>
+          <span>Privacy Policy</span>
         </a>
       </div>
 
@@ -669,7 +667,7 @@
           </div>
 
           <div>
-            <a href="https://play.google.com/store/apps" target="_blank" class="btn-primary">
+            <a href="https://play.google.com/store/apps/details?id=com.illumina.mahjonggame" target="_blank" class="btn-primary" id="btn-play-store">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.994V2.808c.16-.39.387-.74.609-.994zm11.611 11.614l2.427 2.427-12.78 7.378 10.353-9.805zm0-2.856L4.867.767l12.78 7.378-2.427 2.427zm1.428 1.428l3.87 2.235c.813.47.813 1.233 0 1.703l-3.87 2.235-2.14-2.086 2.14-2.087z"/>
               </svg>
@@ -679,7 +677,9 @@
         </div>
 
         <div class="game-preview-visual">
-          <img src="icon512.png" alt="Hong Kong Mahjong App Icon" class="game-icon-large">
+          <div class="icon-container">
+            <img src="icon512.png" alt="Hong Kong Mahjong App Icon" class="game-icon-large">
+          </div>
         </div>
       </div>
     </section>
@@ -723,21 +723,20 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <div class="brand">
+        <div class="footer-brand">
           <img src="icon512.png" alt="Logo" style="width: 32px; height: 32px; border-radius: 8px;">
-          <span style="font-family: 'Cinzel'; font-weight: 700; color: white;">ILLUMINA DEVSOFT</span>
+          <span style="font-weight: 800; font-size: 1.1rem; color: white;">illumina Software</span>
         </div>
 
         <div class="footer-links">
           <a href="#games">Games</a>
           <a href="privacy.html">Privacy Policy</a>
-          <a href="app-ads.txt" target="_blank">app-ads.txt</a>
-          <a href="mailto:illuminadevsoft@gmail.com">Contact Support</a>
+          <a href="mailto:illumina.dev.soft@gmail.com">Contact Support</a>
         </div>
       </div>
 
       <div class="copyright">
-        <p>&copy; 2026 Illumina DevSoft. All rights reserved. Built with passion for tabletop gaming.</p>
+        <p>&copy; 2026 illumina Software. All rights reserved. Built with passion for gaming.</p>
       </div>
     </div>
   </footer>
