@@ -256,7 +256,7 @@
       transform: translateY(-3px);
     }
 
-    /* Floating Tiles Showcase */
+    /* 3D Mahjong Tiles Showcase with Real Authentic PNG Faces */
     .tiles-floating-wrapper {
       margin: 50px 0 70px;
       display: flex;
@@ -266,21 +266,22 @@
     }
 
     .tile-card {
-      width: 76px;
-      height: 102px;
-      background: linear-gradient(145deg, #fffffb 0%, #ede8dc 100%);
-      border-radius: 14px;
+      width: 80px;
+      height: 106px;
+      background: linear-gradient(165deg, #ffffff 0%, #fbfaf6 40%, #ede8dc 100%);
+      border-radius: 12px;
       box-shadow: 
-        0 12px 24px rgba(0, 0, 0, 0.5),
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 2px rgba(255, 255, 255, 0.9),
-        0 0 0 1px rgba(0, 0, 0, 0.15);
+        0 12px 20px rgba(0, 0, 0, 0.45),
+        0 4px 6px rgba(0, 0, 0, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 1),
+        inset 0 -2px 4px rgba(180, 165, 140, 0.35),
+        0 0 0 1px rgba(160, 150, 130, 0.25);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       position: relative;
+      padding: 7px;
       transition: var(--transition-smooth);
       animation: float-tile 5s ease-in-out infinite;
     }
@@ -297,27 +298,20 @@
     }
 
     .tile-card:hover {
-      transform: translateY(-18px) scale(1.15) !important;
-      box-shadow: 0 20px 35px var(--gold-glow);
+      transform: translateY(-18px) scale(1.12) !important;
+      box-shadow: 
+        0 22px 35px var(--gold-glow),
+        0 8px 12px rgba(0, 0, 0, 0.4);
     }
 
-    .tile-symbol {
-      font-size: 2.2rem;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .tile-symbol.red { color: #dc2626; }
-    .tile-symbol.green { color: #059669; }
-    .tile-symbol.blue { color: #1e40af; }
-
-    .tile-sub {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: #64748b;
-      margin-top: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .tile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+      transition: var(--transition-smooth);
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     /* Featured Game Banner Card */
@@ -612,27 +606,22 @@
         </a>
       </div>
 
-      <!-- Floating 3D Mahjong Tiles Banner -->
+      <!-- 3D Mahjong Tiles Showcase with Real Authentic PNG Faces -->
       <div class="tiles-floating-wrapper" id="mahjong-tiles">
         <div class="tile-card" title="Red Dragon (Hong Zhong)">
-          <span class="tile-symbol red">中</span>
-          <span class="tile-sub">Red Dragon</span>
+          <img src="dragon_red.png" alt="Red Dragon Mahjong Tile" class="tile-img">
         </div>
         <div class="tile-card" title="Green Dragon (Fa Cai)">
-          <span class="tile-symbol green">發</span>
-          <span class="tile-sub">Green Dragon</span>
+          <img src="dragon_green.png" alt="Green Dragon Mahjong Tile" class="tile-img">
         </div>
-        <div class="tile-card" title="White Dragon (Bai Ban)">
-          <span class="tile-symbol blue">🀆</span>
-          <span class="tile-sub">White Dragon</span>
+        <div class="tile-card" title="East Wind (Dong Feng)">
+          <img src="wind_east.png" alt="East Wind Mahjong Tile" class="tile-img">
         </div>
-        <div class="tile-card" title="1 Bamboo (Bird)">
-          <span class="tile-symbol green">🀐</span>
-          <span class="tile-sub">1 Bamboo</span>
+        <div class="tile-card" title="1 Character (Yi Wan)">
+          <img src="man1.png" alt="1 Character Mahjong Tile" class="tile-img">
         </div>
-        <div class="tile-card" title="1 Dot (Pearl)">
-          <span class="tile-symbol blue">🀙</span>
-          <span class="tile-sub">1 Dot</span>
+        <div class="tile-card" title="1 Dot (Yi Tong)">
+          <img src="pin1.png" alt="1 Dot Mahjong Tile" class="tile-img">
         </div>
       </div>
     </section>
