@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Mahjong 3D — illumina Software</title>
+  <title>Privacy Policy — illumina Software</title>
   <link rel="icon" type="image/png" href="icon512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +11,12 @@
   <style>
     :root {
       --bg-dark: #040d0a;
-      --card-bg: rgba(10, 30, 24, 0.92);
+      --card-bg: rgba(10, 30, 24, 0.94);
       --card-border: rgba(212, 175, 55, 0.28);
       --gold-primary: #f8df78;
       --gold-accent: #d4af37;
       --emerald-light: #10b981;
-      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --emerald-glow: rgba(16, 185, 129, 0.18);
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
@@ -32,8 +32,8 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 40%);
       color: var(--text-main);
       line-height: 1.75;
       padding: 40px 20px 80px;
@@ -41,21 +41,21 @@
     }
 
     .container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 24px;
       padding: 48px 40px;
       backdrop-filter: blur(16px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 30px var(--emerald-glow);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 35px var(--emerald-glow);
     }
 
     .header-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
       padding-bottom: 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -65,7 +65,7 @@
       align-items: center;
       gap: 8px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--emerald-light);
       text-decoration: none;
       transition: all 0.2s ease;
@@ -91,19 +91,19 @@
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: var(--gold-primary);
       margin-bottom: 10px;
       letter-spacing: -0.5px;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     .meta-bar {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       font-size: 0.88rem;
       color: var(--text-muted);
     }
@@ -114,43 +114,115 @@
       gap: 6px;
     }
 
-    .app-badge-box {
-      background: rgba(4, 76, 58, 0.35);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 16px;
-      padding: 20px 24px;
-      margin-bottom: 36px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 20px;
+    .section-lead {
+      color: #cbd5e1;
+      font-size: 1.02rem;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    /* Covered Games Grid */
+    .apps-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      display: flex;
       align-items: center;
+      gap: 8px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .app-card {
+      background: rgba(4, 76, 58, 0.32);
+      border: 1px solid rgba(16, 185, 129, 0.32);
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gold-accent);
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.15);
+      background: rgba(4, 76, 58, 0.48);
+    }
+
+    .app-card:hover::before {
+      opacity: 1;
     }
 
     .app-icon {
-      width: 64px;
-      height: 64px;
+      width: 62px;
+      height: 62px;
       border-radius: 14px;
       border: 2px solid rgba(212, 175, 55, 0.5);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+      object-fit: cover;
+      flex-shrink: 0;
+      background-color: #0b1a14;
+    }
+
+    .app-details {
+      min-width: 0;
+      flex: 1;
     }
 
     .app-details h3 {
-      font-size: 1.15rem;
-      color: #fff;
+      font-size: 1.08rem;
+      color: #ffffff;
       font-weight: 700;
       margin-bottom: 4px;
+      line-height: 1.25;
     }
 
-    .app-details p {
-      font-size: 0.85rem;
+    .app-details .pkg-name {
+      font-size: 0.76rem;
       color: var(--emerald-light);
       font-family: monospace;
-      margin-bottom: 0;
+      margin-bottom: 6px;
+      word-break: break-all;
+    }
+
+    .app-details .app-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 6px;
+      padding: 2px 8px;
     }
 
     h2 {
       color: var(--emerald-light);
-      margin-top: 40px;
+      margin-top: 42px;
       margin-bottom: 16px;
       font-size: 1.35rem;
       font-weight: 700;
@@ -171,9 +243,9 @@
 
     h3 {
       color: #cbd5e1;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 600;
-      margin-top: 20px;
+      margin-top: 22px;
       margin-bottom: 10px;
     }
 
@@ -198,66 +270,60 @@
       color: #e2e8f0;
     }
 
-    .callout {
-      background: rgba(212, 175, 55, 0.08);
-      border-left: 4px solid var(--gold-accent);
-      padding: 16px 20px;
-      border-radius: 0 12px 12px 0;
-      margin: 24px 0;
-    }
-
-    .callout p {
-      color: #e2e8f0;
-      margin-bottom: 0;
-      font-size: 0.95rem;
-    }
-
-    .callout strong {
+    code {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.88rem;
       color: var(--gold-primary);
     }
 
     a {
-      color: var(--gold-primary);
-      text-decoration: none;
-      border-bottom: 1px dotted rgba(248, 223, 120, 0.4);
-      transition: all 0.2s ease;
+      color: var(--emerald-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
     }
 
     a:hover {
-      color: #fff;
-      border-bottom: 1px solid #fff;
+      color: var(--gold-primary);
+    }
+
+    .highlight-card {
+      background: rgba(16, 185, 129, 0.07);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin: 22px 0;
+    }
+
+    .highlight-card p {
+      margin-bottom: 0;
+      color: #e2e8f0;
     }
 
     .footer-divider {
-      margin-top: 48px;
-      padding-top: 28px;
+      margin-top: 50px;
+      padding-top: 24px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 12px;
       font-size: 0.85rem;
       color: var(--text-dim);
     }
 
     @media (max-width: 640px) {
       .container {
-        padding: 28px 20px;
-        border-radius: 18px;
+        padding: 32px 20px;
       }
       h1 {
         font-size: 1.85rem;
       }
-      .app-badge-box {
+      .apps-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-        justify-items: center;
-      }
-      .header-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
       }
     }
   </style>
@@ -265,96 +331,146 @@
 <body>
   <div class="container">
     <div class="header-nav">
-      <a href="index.html" class="back-btn">&larr; Back to illumina Studio</a>
-      <span class="studio-tag">illumina Software Legal</span>
+      <a href="index.html" class="back-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Studio Home
+      </a>
+      <span class="studio-tag">illumina Software</span>
     </div>
 
-    <h1>Privacy Policy</h1>
+    <h1>Unified Privacy Policy</h1>
+    
     <div class="meta-bar">
-      <span><strong>Effective Date:</strong> October 24, 2026</span>
-      <span>&bull;</span>
-      <span><strong>Developer:</strong> illumina Software</span>
-      <span>&bull;</span>
-      <span><strong>Contact:</strong> illumina.dev.soft@gmail.com</span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        Effective Date: October 24, 2026
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        Applies to All illumina Software Titles
+      </span>
     </div>
 
-    <div class="app-badge-box">
-      <img src="icon512.png" alt="Mahjong 3D App Icon" class="app-icon">
-      <div class="app-details">
-        <h3>Mahjong 3D</h3>
-        <p>Package ID: com.illumina.mahjong3D</p>
-        <p style="color: var(--text-muted); font-size: 0.82rem; font-family: inherit; margin-top: 4px;">
-          Available on Google Play &bull; Also applies to related mobile titles published by illumina Software
-        </p>
+    <p class="section-lead">
+      Welcome to <strong>illumina Software</strong> ("we", "our", or "us"). We design and publish high-quality tabletop, puzzle, and strategic mobile games. Your privacy is paramount to us. This Unified Privacy Policy explains how our titles handle, protect, and process user data across our entire mobile portfolio.
+    </p>
+
+    <div class="apps-section-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+        <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+      </svg>
+      Covered Games &amp; Applications
+    </div>
+
+    <!-- 3 Games Grid with Verified Icons -->
+    <div class="apps-grid">
+      <!-- Game 1: Hong Kong Mahjong Game -->
+      <div class="app-card">
+        <img src="icon_hk_mahjong.png" alt="Hong Kong Mahjong Game Icon" class="app-icon">
+        <div class="app-details">
+          <h3>Hong Kong Mahjong Game</h3>
+          <div class="pkg-name">com.illumina.mahjonggame</div>
+          <span class="app-tag">Traditional 13-Tile &bull; Realtime 4P</span>
+        </div>
+      </div>
+
+      <!-- Game 2: ASMR Mahjong -->
+      <div class="app-card">
+        <img src="icon_asmr_mahjong.png" alt="ASMR Mahjong Icon" class="app-icon">
+        <div class="app-details">
+          <h3>ASMR Mahjong</h3>
+          <div class="pkg-name">com.illumina.zen</div>
+          <span class="app-tag">Zen Solitaire &bull; Tactile Audio</span>
+        </div>
+      </div>
+
+      <!-- Game 3: Mahjong 3D -->
+      <div class="app-card">
+        <img src="icon_mahjong_3d.png" alt="Mahjong 3D Icon" class="app-icon">
+        <div class="app-details">
+          <h3>Mahjong 3D</h3>
+          <div class="pkg-name">com.illumina.mahjong3D</div>
+          <span class="app-tag">3D Table &bull; AI &amp; Multiplayer</span>
+        </div>
       </div>
     </div>
 
-    <p>
-      At <strong>illumina Software</strong> ("we", "our", or "us"), we value and respect your privacy. This Privacy Policy describes how information is collected, used, disclosed, and safeguarded when you download, install, and play our mobile games, specifically <strong>Mahjong 3D</strong> (Application ID: <code>com.illumina.mahjong3D</code>) and related mobile titles published by illumina Software.
-    </p>
-
-    <div class="callout">
+    <div class="highlight-card">
       <p>
-        <strong>Zero Real-Money Gambling Notice:</strong> Mahjong 3D is a traditional strategy board game engineered strictly for casual fun, mental agility, and social entertainment. The application <strong>does NOT offer real-money gambling</strong>, betting, cash prizes, or any opportunity to win real currency. All virtual coins, fans, scores, and points within the game are purely fictitious scorekeeping metrics with zero monetary value.
+        <strong>Zero Personal Identification Guarantee:</strong> We do not ask for, collect, or store your real name, physical address, government identity numbers, contact book, microphone recordings, or private camera footage in any of our games.
       </p>
     </div>
 
-    <h2>1. Information We Collect</h2>
-    <p>
-      Our design philosophy is to minimize data collection. We do not require you to register with personal real-world identities (such as your full legal name, home address, credit card number, or phone number) to enjoy the core single-player or multiplayer modes.
-    </p>
+    <h2>1. Information We Collect and Process</h2>
 
-    <h3>A. Information Collected Automatically via Third-Party SDKs</h3>
-    <p>When you access or play the game, third-party services and advertising networks may automatically receive certain technical and device data:</p>
+    <h3>A. Technical, Device, and Telemetry Data</h3>
+    <p>When you access or play our games, third-party analytics and advertising networks may automatically receive technical device telemetry necessary for operating the application:</p>
     <ul>
-      <li><strong>Device Identifiers:</strong> Android Advertising ID (AAID/GAID), IP address, unique device identifier (pseudonymous).</li>
-      <li><strong>Device and System Specifications:</strong> Device model, manufacturer, operating system version, system language settings, screen resolution, and available RAM.</li>
-      <li><strong>Diagnostic & Telemetry Data:</strong> Crash reports, application performance metrics, render engine diagnostics, and network latency status.</li>
+      <li><strong>Pseudonymous Identifiers:</strong> Android Advertising ID (AAID/GAID), IP address, and platform-generated installation identifiers.</li>
+      <li><strong>Device and Operating System Specifications:</strong> Hardware model, manufacturer, OS version, system language settings, screen density/resolution, and available RAM.</li>
+      <li><strong>Stability &amp; Crash Telemetry:</strong> Anonymized stack traces, crash dumps, render engine diagnostics, and network latency status used strictly to resolve bugs and optimize framerates.</li>
     </ul>
 
     <h3>B. Game State and Local Preferences</h3>
     <ul>
-      <li><strong>Local Storage (PlayerPrefs):</strong> In-game sound effect volume, background music toggle, preferred table cloth color, tile face styles, chosen language (Indonesian or English), and virtual score records are saved locally on your device storage.</li>
-      <li><strong>Multiplayer Matchmaking & In-Game Actions:</strong> When you connect to online multiplayer rooms, transient gameplay packets (such as your chosen display name, avatar index, and tile discard/meld actions) are transmitted securely over WebSocket to enable real-time game synchronization with other participants at the table.</li>
+      <li><strong>Local Device Storage (PlayerPrefs / SharedPreferences):</strong> Audio volume (music &amp; sound effects), table cloth themes, tile face styles, game mode preferences, and offline high scores are stored locally on your device hardware.</li>
+      <li><strong>Transient Multiplayer State (Hong Kong Mahjong Game &amp; Mahjong 3D):</strong> When playing online multiplayer matches, temporary in-game action packets (such as selected avatar index, temporary nickname, and tile discard/meld actions) are transmitted securely over WebSocket to coordinate realtime board synchronization among table participants. These session packets are ephemeral and discarded once the match concludes.</li>
+      <li><strong>Offline Zen Progress (ASMR Mahjong):</strong> Board layout configurations, undo/hint states, and puzzle completion stats reside completely on your local device.</li>
     </ul>
 
-    <h2>2. Third-Party Services & Monetization</h2>
+    <h2>2. Third-Party Services &amp; Monetization</h2>
     <p>
-      To support ongoing server infrastructure, multiplayer operations, and feature updates while keeping our games free to play, we partner with trusted industry-leading third-party service providers:
+      To support ongoing server infrastructure, multiplayer synchronization, and continuous updates while keeping our games free to enjoy, we partner with trusted industry-standard SDK providers:
     </p>
 
     <ul>
       <li>
         <strong>Google Mobile Ads (AdMob):</strong><br>
-        We display advertisements provided by Google AdMob (Publisher ID: <code>pub-8741072533289236</code>), which may include banner ads, interstitial transition screens, and opt-in rewarded video ads. Google AdMob may collect and process device identifiers, ad interaction data, and network connection info in accordance with Google's Privacy Policies.<br>
+        We display advertisements provided by Google AdMob, which may include banner ads, interstitial transition screens, and opt-in rewarded video ads. Google AdMob may collect and process device identifiers, ad interaction data, and network connection info in accordance with Google's Privacy Policies.<br>
         &bull; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a><br>
         &bull; <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google Uses Information From Sites or Apps That Use Our Services</a>
       </li>
       <li>
         <strong>Google Play Services:</strong><br>
-        Provides essential operating system bridging, integrity checks, and distribution updates on Android devices.<br>
+        Provides essential Android OS bridging, application integrity checks, and distribution updates on Android devices.<br>
         &bull; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services Privacy Policy</a>
+      </li>
+      <li>
+        <strong>Firebase (Crashlytics &amp; Core Diagnostics):</strong><br>
+        Monitors application stability, fatal exceptions, and performance benchmarks to help our development team quickly pinpoint and resolve technical defects.<br>
+        &bull; <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
       </li>
     </ul>
 
     <h2>3. How We Use Collected Information</h2>
-    <p>The information processed is used solely for legitimate operational purposes:</p>
+    <p>Information processed by our games is utilized strictly for legitimate operational purposes:</p>
     <ul>
-      <li>To provide, operate, and maintain seamless single-player and multiplayer gameplay.</li>
-      <li>To detect, diagnose, and resolve technical bugs, memory anomalies, and network disconnections.</li>
-      <li>To serve relevant, non-intrusive advertisements that fund free gameplay.</li>
-      <li>To protect players against malicious activities, packet spoofing, and cheating.</li>
-      <li>To ensure compliance with Google Play Developer Program Policies.</li>
+      <li>To provide, operate, and maintain smooth single-player and multiplayer tabletop gameplay.</li>
+      <li>To detect, diagnose, and resolve technical bugs, memory anomalies, and connection drops.</li>
+      <li>To serve non-intrusive advertisements that support free gameplay without paywalls.</li>
+      <li>To protect players against malicious activities, packet manipulation, and unfair gameplay.</li>
+      <li>To maintain full compliance with Google Play Developer Program Policies.</li>
     </ul>
 
-    <h2>4. Advertising ID & User Opt-Out Choices</h2>
+    <h2>4. Advertising ID &amp; User Opt-Out Choices</h2>
     <p>
       You have full control over the advertising identifiers utilized by third-party advertising networks on your Android device:
     </p>
     <ul>
       <li>
         <strong>Reset or Delete Android Advertising ID:</strong><br>
-        On your Android device, navigate to <em>Settings &gt; Google &gt; Ads</em> (or <em>Privacy &gt; Ads</em>). From there, you can tap <strong>"Reset advertising ID"</strong> or choose <strong>"Delete advertising ID"</strong> to restrict personalized ad tracking across all apps.
+        On your Android device, open <em>Settings &gt; Google &gt; Ads</em> (or <em>Privacy &gt; Ads</em>). From there, you can tap <strong>"Reset advertising ID"</strong> or choose <strong>"Delete advertising ID"</strong> to restrict personalized ad tracking across all apps.
       </li>
       <li>
         <strong>Non-Personalized Ads:</strong><br>
@@ -362,13 +478,13 @@
       </li>
     </ul>
 
-    <h2>5. Data Retention & Deletion Policy</h2>
+    <h2>5. Data Retention &amp; Deletion Policy</h2>
     <p>
       We retain gameplay and telemetry data only as long as necessary to fulfill the operational purposes described in this policy:
     </p>
     <ul>
       <li>
-        <strong>Local Data Removal:</strong> Since your settings, game history, and preferences are stored locally on your mobile device, you can permanently erase all local game data at any time by going to <em>Android Settings &gt; Apps &gt; Mahjong 3D &gt; Storage &gt; Clear Data / Clear Cache</em>, or by uninstalling the application.
+        <strong>Local Data Removal:</strong> Because game history, theme selections, and preferences are saved locally on your mobile device, you can permanently erase all local game data at any time by navigating to <em>Android Settings &gt; Apps &gt; [Game Name] (Hong Kong Mahjong Game / ASMR Mahjong / Mahjong 3D) &gt; Storage &gt; Clear Data / Clear Cache</em>, or by uninstalling the application.
       </li>
       <li>
         <strong>Multiplayer Transient Data:</strong> Multiplayer room states and discard events are held in volatile server memory only for the duration of the match and are discarded after the room closes.
@@ -378,9 +494,9 @@
       </li>
     </ul>
 
-    <h2>6. Children's Privacy (COPPA & Families Compliance)</h2>
+    <h2>6. Children's Privacy (COPPA &amp; Families Compliance)</h2>
     <p>
-      We place utmost importance on protecting the privacy of young players. <strong>Mahjong 3D</strong> is not directed to children under the age of 13. We do not knowingly collect, request, or solicit personal information from children under 13 years of age. If we learn that we have unintentionally collected personal information from a child under 13 without verifiable parental consent, we will promptly delete that information from our records.
+      We place utmost importance on protecting the privacy of young players. Our games (<strong>Hong Kong Mahjong Game</strong>, <strong>ASMR Mahjong</strong>, and <strong>Mahjong 3D</strong>) are not directed to children under the age of 13. We do not knowingly collect, request, or solicit personal information from children under 13 years of age. If we learn that we have unintentionally collected personal information from a child under 13 without verifiable parental consent, we will promptly delete that information from our records.
     </p>
 
     <h2>7. Security Measures</h2>
@@ -388,7 +504,7 @@
       We implement reasonable administrative, technical, and physical safeguards to protect information against unauthorized access, loss, or alteration. Multiplayer communications between your device and our backend servers are routed through secure, encrypted communication protocols (TLS/WSS).
     </p>
 
-    <h2>8. International Privacy Rights (GDPR & CCPA)</h2>
+    <h2>8. International Privacy Rights (GDPR &amp; CCPA)</h2>
     <p>Depending on your geographic jurisdiction, you may have specific privacy rights:</p>
     <ul>
       <li><strong>European Union / UK (GDPR):</strong> You have the right to request access to, rectification of, or erasure of any personal data we hold; the right to object to or restrict processing; and the right to lodge a complaint with your local Data Protection Authority.</li>
@@ -397,12 +513,12 @@
 
     <h2>9. Changes to This Privacy Policy</h2>
     <p>
-      We may update our Privacy Policy periodically to reflect changes in our gameplay features, third-party technologies, or legal requirements. Any modifications will be posted directly to this URL with an updated "Effective Date". We encourage you to review this page periodically to stay informed.
+      We may update our Unified Privacy Policy periodically to reflect changes in our gameplay features, third-party technologies, or legal requirements. Any modifications will be posted directly to this URL with an updated "Effective Date". We encourage you to review this page periodically to stay informed.
     </p>
 
     <h2>10. Contact Us</h2>
     <p>
-      If you have questions, feedback, or data privacy requests concerning this Privacy Policy or our games, please contact us:
+      If you have questions, feedback, or data privacy requests concerning this Privacy Policy or any of our games, please contact us:
     </p>
     <ul style="list-style-type: none; padding-left: 0;">
       <li style="margin-bottom: 8px;"><strong>Studio Name:</strong> illumina Software</li>
@@ -412,7 +528,7 @@
 
     <div class="footer-divider">
       <span>&copy; 2026 illumina Software. All rights reserved.</span>
-      <span>Mahjong 3D &bull; com.illumina.mahjong3D</span>
+      <span>Hong Kong Mahjong Game &bull; ASMR Mahjong &bull; Mahjong 3D</span>
     </div>
   </div>
 </body>
